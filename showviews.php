@@ -11,7 +11,7 @@ class AdminerShowViews
 {
     function tablesPrint(&$tables)
     {
-        if (!preg_match("/editor/i", Adminer::name())) return;
+        if (!preg_match("/editor/i", (new Adminer)->name())) return;
 
         foreach ($tables as $table => $status) {
             $tables[$table]['Engine'] = '';
